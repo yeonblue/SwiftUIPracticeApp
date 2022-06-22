@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45833DDA2861E4970054AD5F /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45833DD82861E4970054AD5F /* Main.xcdatamodeld */; };
+		45833DDC286333D80054AD5F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45833DDB286333D80054AD5F /* DataController.swift */; };
 		45F5DFEC284E116B00BD223A /* SwiftUIPracticeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5DFEB284E116B00BD223A /* SwiftUIPracticeAppApp.swift */; };
 		45F5DFEE284E116B00BD223A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5DFED284E116B00BD223A /* ContentView.swift */; };
 		45F5DFF0284E116E00BD223A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F5DFEF284E116E00BD223A /* Assets.xcassets */; };
@@ -14,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45833DD92861E4970054AD5F /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		45833DDB286333D80054AD5F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		45833DDD2863411B0054AD5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		45F5DFE8284E116B00BD223A /* SwiftUIPracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F5DFEB284E116B00BD223A /* SwiftUIPracticeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeAppApp.swift; sourceTree = "<group>"; };
 		45F5DFED284E116B00BD223A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,10 +56,13 @@
 		45F5DFEA284E116B00BD223A /* SwiftUIPracticeApp */ = {
 			isa = PBXGroup;
 			children = (
+				45833DDD2863411B0054AD5F /* Info.plist */,
 				45F5DFEB284E116B00BD223A /* SwiftUIPracticeAppApp.swift */,
 				45F5DFED284E116B00BD223A /* ContentView.swift */,
 				45F5DFEF284E116E00BD223A /* Assets.xcassets */,
 				45F5DFF1284E116E00BD223A /* Preview Content */,
+				45833DD82861E4970054AD5F /* Main.xcdatamodeld */,
+				45833DDB286333D80054AD5F /* DataController.swift */,
 			);
 			path = SwiftUIPracticeApp;
 			sourceTree = "<group>";
@@ -137,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45833DDA2861E4970054AD5F /* Main.xcdatamodeld in Sources */,
+				45833DDC286333D80054AD5F /* DataController.swift in Sources */,
 				45F5DFEE284E116B00BD223A /* ContentView.swift in Sources */,
 				45F5DFEC284E116B00BD223A /* SwiftUIPracticeAppApp.swift in Sources */,
 			);
@@ -272,6 +282,7 @@
 				DEVELOPMENT_TEAM = 433LH3TNXX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPracticeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +312,7 @@
 				DEVELOPMENT_TEAM = 433LH3TNXX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPracticeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +353,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		45833DD82861E4970054AD5F /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45833DD92861E4970054AD5F /* Main.xcdatamodel */,
+			);
+			currentVersion = 45833DD92861E4970054AD5F /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 45F5DFE0284E116B00BD223A /* Project object */;
 }
