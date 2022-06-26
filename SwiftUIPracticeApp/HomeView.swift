@@ -12,7 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var dataController: DataController
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Button("Add Data") {
                     dataController.deleteAll()

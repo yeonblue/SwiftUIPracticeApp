@@ -23,13 +23,13 @@ struct ProjectView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 // wrappedValue는 results of the fetch request.
                 ForEach(projects.wrappedValue) { project in
-                    Section(header: Text(project.title ?? "")) {
-                        ForEach(project.items?.allObjects as? [Item] ?? []) { item in
-                            Text(item.title ?? "")
+                    Section(header: Text(project.projectTitle)) {
+                        ForEach(project.allProjectItems) { item in
+                            Text(item.itemTitle)
                         }
                     }
                     
