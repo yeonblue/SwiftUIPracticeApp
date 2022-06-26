@@ -16,7 +16,7 @@ class DataController: ObservableObject {
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
         
-        // 데이터가 디스크가 아닌 메모리에 생성. 앱이 종료되면 데이터가 사라짐.
+        // 데이터가 디스크가 아닌 메모리에 생성. 앱이 종료되면 데이터가 사라짐. SwiftUI 프리뷰용
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -68,8 +68,8 @@ class DataController: ObservableObject {
         try viewContext.save()
         
         // 1. viewContext는 디스크에서 로드된 데이터 풀이기 때문에 Core Data에서 정말 중요한 개념.
-        // 2. viewContext의 인스턴스를 생성할 때 인스턴스 Project가 Item 내부에 있는 보기 컨텍스트를 알려야 한다. 이를 통해 Core Data는 생성된 위치를 추적할 수 있으므로 나중에 저장할 위치를 알 수 있습니다.
-        // 3. try viewContext.save()를 하며 모든 새 개체를 영구 저장소에 쓰도록 지시하는 viewContext를 호출한다. 이는 메모리에 있을 수 있고, 영구적인 저장소일 수도 있습니다. 지금의 경우 앱을 삭제하지 않는 한 지속 유지.
+        // 2. viewContext의 인스턴스를 생성할 때 인스턴스 Project가 Item 내부에 있는 보기 컨텍스트를 알려야 한다. 이를 통해 Core Data는 생성된 위치를 추적할 수 있으므로 나중에 저장할 위치를 알 수 있다.
+        // 3. try viewContext.save()를 하며 모든 새 개체를 영구 저장소에 쓰도록 지시하는 viewContext를 호출한다. 이는 메모리에 있을 수 있고, 영구적인 저장소일 수도 있다. 지금의 경우 앱을 삭제하지 않는 한 지속 유지.
     }
     
     func save() {
