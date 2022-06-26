@@ -32,7 +32,9 @@ struct ProjectView: View {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: Text(project.projectTitle)) {
                         ForEach(project.allProjectItems) { item in
-                            Text(item.itemTitle)
+                            NavigationLink(destination: EditItemView(item: item)) {
+                                Text(item.itemTitle)
+                            }
                         }
                     }
                     
