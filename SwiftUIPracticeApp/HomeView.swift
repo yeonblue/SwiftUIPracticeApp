@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    static let tag: String? = "Home" // TabView의 selectedView가 String?이므로 타입을 맞춰야 햠
     @EnvironmentObject var dataController: DataController
     
     var body: some View {

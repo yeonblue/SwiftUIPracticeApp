@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ProjectView: View {
     
+    static let openTag: String? = "Open" // 같은 뷰를 open, close에서 사용하고 있으므로 태그로 분류
+    static let closeTag: String? = "Close"
+    
     let showClosedProjects: Bool
     let projects: FetchRequest<Project> // @FetchRequest 프로퍼티 래퍼로 사용도 가능
     
