@@ -29,12 +29,12 @@ struct EditItemView: View {
     var body: some View {
         Form {
             Section(header: Text("Basic settings")) {
-                TextField("Item name", text: $title)
-                TextField("Description", text: $detail)
+                TextField("Item name", text: $title.onChange(update))
+                TextField("Description", text: $detail.onChange(update))
             }
             
             Section(header: Text("Priority")) {
-                Picker("Priority", selection: $priority) {
+                Picker("Priority", selection: $priority.onChange(update)) {
                     Text("Low").tag(1)
                     Text("Medium").tag(2)
                     Text("High").tag(3)
@@ -42,11 +42,11 @@ struct EditItemView: View {
             }
             
             Section {
-                Toggle("Mark Completed", isOn: $completed)
+                Toggle("Mark Completed", isOn: $completed.onChange(update))
             }
         }
         .navigationTitle("Edit Item")
-        .onDisappear(perform: update)
+        .onDisappear(perform: dataController.save)
     }
     
     func update() {
@@ -54,9 +54,8 @@ struct EditItemView: View {
         item.detail = detail
         item.priority = Int16(priority)
         item.completed = completed
-        
-        // Project가 item을 가지고 있으므로, Project가 바뀌면 item도 바뀜.
-        item.project?.objectWillChange.send()
+
+        // 여기서 매번 dataController.save()는 비효율. 따라서 Noti와 onDisappear 이용
     }
 }
 

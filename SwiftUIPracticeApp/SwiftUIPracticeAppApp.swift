@@ -27,6 +27,12 @@ struct SwiftUIPracticeAppApp: App {
                 // SwiftUI가 Core Data를 쿼리할 때마다 데이터를 위치를 알아야 하므로 설정.
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(dataController)
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
+                           perform: save)
         }
+    }
+    
+    func save(_ noti: Notification) {
+        dataController.save()
     }
 }
