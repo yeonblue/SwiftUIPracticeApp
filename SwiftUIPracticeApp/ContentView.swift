@@ -17,8 +17,8 @@ struct ContentView: View {
             HomeView()
                 .tag(HomeView.tag)
                 .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+                    // Image, Text대신 Label을 넘겨도 됨
+                    Label("Home", systemImage: "house")
                 }
             
             ProjectView(showClosedProjects: false)

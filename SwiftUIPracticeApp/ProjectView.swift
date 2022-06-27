@@ -31,13 +31,8 @@ struct ProjectView: View {
                 // wrappedValue는 results of the fetch request.
                 ForEach(projects.wrappedValue) { project in
                     Section(header: Text(project.projectTitle)) {
-                        ForEach(project.allProjectItems) { item in
-                            NavigationLink(destination: EditItemView(item: item)) {
-                                Text(item.itemTitle)
-                            }
-                        }
+                        ForEach(project.allProjectItems, content: ItemRowView.init)
                     }
-                    
                 }
                 .listStyle(.insetGrouped)
                 .navigationTitle(showClosedProjects ? "Closed Projects"

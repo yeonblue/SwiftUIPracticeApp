@@ -46,7 +46,17 @@ struct EditItemView: View {
             }
         }
         .navigationTitle("Edit Item")
+        .onDisappear(perform: update)
+    }
+    
+    func update() {
+        item.title = title
+        item.detail = detail
+        item.priority = Int16(priority)
+        item.completed = completed
         
+        // Project가 item을 가지고 있으므로, Project가 바뀌면 item도 바뀜.
+        item.project?.objectWillChange.send()
     }
 }
 

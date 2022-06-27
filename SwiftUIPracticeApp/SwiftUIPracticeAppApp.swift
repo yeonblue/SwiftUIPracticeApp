@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct SwiftUIPracticeAppApp: App {
+    // StateObject는 내가 그 object를 소유함을 의미. 첫 생성은 @StateObject로 하고 value를 넘길 때는 @ObservedObject로 함.
     @StateObject var dataController: DataController
     
     init() {
