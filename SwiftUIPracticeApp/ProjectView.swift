@@ -30,7 +30,7 @@ struct ProjectView: View {
             List {
                 // wrappedValue는 results of the fetch request.
                 ForEach(projects.wrappedValue) { project in
-                    Section(header: Text(project.projectTitle)) {
+                    Section(header: ProjectHeaderView(project: project)) {
                         ForEach(project.allProjectItems, content: ItemRowView.init)
                     }
                 }
