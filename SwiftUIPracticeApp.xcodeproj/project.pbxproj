@@ -18,6 +18,7 @@
 		459E29442869D46900126B46 /* Binding-onChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E29432869D46900126B46 /* Binding-onChange.swift */; };
 		459E2946286C702400126B46 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E2945286C702400126B46 /* ProjectHeaderView.swift */; };
 		459E2948286C749800126B46 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459E2947286C749800126B46 /* Colors.xcassets */; };
+		45D0B3EC2885825200F35FE8 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0B3EB2885825200F35FE8 /* EditProjectView.swift */; };
 		45F5DFEC284E116B00BD223A /* SwiftUIPracticeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5DFEB284E116B00BD223A /* SwiftUIPracticeAppApp.swift */; };
 		45F5DFEE284E116B00BD223A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5DFED284E116B00BD223A /* ContentView.swift */; };
 		45F5DFF0284E116E00BD223A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F5DFEF284E116E00BD223A /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		459E29432869D46900126B46 /* Binding-onChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-onChange.swift"; sourceTree = "<group>"; };
 		459E2945286C702400126B46 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		459E2947286C749800126B46 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		45D0B3EB2885825200F35FE8 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		45F5DFE8284E116B00BD223A /* SwiftUIPracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F5DFEB284E116B00BD223A /* SwiftUIPracticeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeAppApp.swift; sourceTree = "<group>"; };
 		45F5DFED284E116B00BD223A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		45F5DFDF284E116B00BD223A = {
 			isa = PBXGroup;
 			children = (
+				45D0B3EB2885825200F35FE8 /* EditProjectView.swift */,
 				45F5DFEA284E116B00BD223A /* SwiftUIPracticeApp */,
 				45F5DFE9284E116B00BD223A /* Products */,
 			);
@@ -193,6 +196,7 @@
 				459E2946286C702400126B46 /* ProjectHeaderView.swift in Sources */,
 				45833DE12866D7DB0054AD5F /* ProjectView.swift in Sources */,
 				459E29442869D46900126B46 /* Binding-onChange.swift in Sources */,
+				45D0B3EC2885825200F35FE8 /* EditProjectView.swift in Sources */,
 				45833DDA2861E4970054AD5F /* Main.xcdatamodeld in Sources */,
 				45833DDC286333D80054AD5F /* DataController.swift in Sources */,
 				459E29412869CEAD00126B46 /* ItemRowView.swift in Sources */,
