@@ -79,7 +79,6 @@
 		45F5DFDF284E116B00BD223A = {
 			isa = PBXGroup;
 			children = (
-				45D0B3EB2885825200F35FE8 /* EditProjectView.swift */,
 				45F5DFEA284E116B00BD223A /* SwiftUIPracticeApp */,
 				45F5DFE9284E116B00BD223A /* Products */,
 			);
@@ -109,6 +108,7 @@
 				459E29402869CEAD00126B46 /* ItemRowView.swift */,
 				459D5BD5286845A500035006 /* EditItemView.swift */,
 				459E2945286C702400126B46 /* ProjectHeaderView.swift */,
+				45D0B3EB2885825200F35FE8 /* EditProjectView.swift */,
 			);
 			path = SwiftUIPracticeApp;
 			sourceTree = "<group>";

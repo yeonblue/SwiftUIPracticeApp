@@ -14,9 +14,12 @@ struct ProjectView: View {
     
     let showClosedProjects: Bool
     let projects: FetchRequest<Project> // @FetchRequest 프로퍼티 래퍼로 사용도 가능
+    //@FetchRequest var projects: FetchedResults<Project>
     
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
+        
+        // property wrapper로 선언했으면 _projects로 초기화
         
         projects = FetchRequest<Project>(
             entity: Project.entity(),
