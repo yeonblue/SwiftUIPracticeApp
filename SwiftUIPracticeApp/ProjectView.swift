@@ -16,6 +16,9 @@ struct ProjectView: View {
     let projects: FetchRequest<Project> // @FetchRequest 프로퍼티 래퍼로 사용도 가능
     //@FetchRequest var projects: FetchedResults<Project>
     
+    @EnvironmentObject var dataController: DataController
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
         
@@ -38,8 +41,23 @@ struct ProjectView: View {
                     }
                 }
                 .listStyle(.insetGrouped)
-                .navigationTitle(showClosedProjects ? "Closed Projects"
-                                                    : "Open Projects")
+            }
+            .navigationTitle(showClosedProjects ? "Closed Projects"
+                                                : "Open Projects")
+            .toolbar {
+                if showClosedProjects == false {
+                    Button {
+                        withAnimation {
+                            let project = Project(context: managedObjectContext)
+                            project.closed = false
+                            project.createDate = Date()
+                            dataController.save()
+                        }
+                    } label: {
+                        Label("Add Project", systemImage: "plus")
+                    }
+
+                }
             }
         }
     }
